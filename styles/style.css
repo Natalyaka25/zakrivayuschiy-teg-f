@@ -12,5 +12,136 @@
 
 .page {
   min-inline-size: 320px;
+  max-inline-size: 696px;
   min-block-size: 100dvb;
+  align-items: center;
+  font-family: var(--font-family, sans-serif);
+  font-variation-settings: 'wght' var(--font-weight-normal);
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: 
+    repeating-linear-gradient(to bottom, var(--gradient-color)0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to right, var(--gradient-color) 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, var(--gradient-color-start) 0.01%, var(--gradient-color-end));
+  font-size: 18px;
 }
+
+.block-outline {
+  outline: 2px solid #000;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: var(--font-family-accent, sans-serif);
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  margin-block-start: 102px;
+  block-size: clamp(20.25rem, 19.3697rem + 3.7559vw, 22.75rem);
+}
+
+.header__heading {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+}
+
+.header__title {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  text-transform: uppercase;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-block-end: 52px;
+  background-color: var(--background-color);
+  margin-block-start: 104px; /*из за outline увеличивется margin */
+}
+
+.card__title {
+  font-family: var(--font-family, sans-serif);
+  font-variation-settings: "wght" var(--font-weight-bold);
+  font-size: 18px;
+  padding-block-start: var(--padding-card-top);
+  padding-inline-start: var(--padding-card-left);
+  padding-block-end: var(--padding-card-bottom);
+  padding-inline-end: var(--padding-card-right);
+}
+
+.card__img-block {
+  position: relative; 
+}
+
+.card__img {
+  inset: 0;
+  width: 100%;
+}
+
+.card__img-label {
+  content: "";
+  position: absolute;
+  inset-inline-end: 25px; /*рассчитать*/
+  inset-block-start: 25px;
+  font-family: var(--font-family-accent, sans-serif);
+  font-size: 14px;
+  -webkit-background-clip: text;
+  text-shadow: -1px -1px 0 var(--shadow-color),
+                1px -1px 0 var(--shadow-color),
+               -1px 1px 0 var(--shadow-color),
+                1px 1px 0 var(--shadow-color); 
+  mix-blend-mode: hard-light;
+  opacity: 50%;
+}
+
+.card__paragraph {
+  font-family: var(--font-family, sans-serif);
+  font-variation-settings: "wght" var(--font-weight-normal);
+  font-size: 18px;
+  line-height: 21px;
+  padding-inline: 25px;
+  padding-block-start: 25px;
+  /* padding-block-end: 25px; */
+}
+
+.buttons {
+  display: flex;
+  position: relative;
+  gap: 12px;
+  block-size: 100%;
+  inline-size: 100%;
+  border: none;
+  background-color: transparent;
+  inset-inline-end: 25px;
+  padding-block-start: 25px;
+  padding-block-end: 25px;
+  justify-content: flex-end;
+}
+
+
+svg {
+
+  width: 39px;
+  height: 36px;
+  
+
+}
+
+.button__text {
+  font-family: var( --font-family-accent, sans-serif);
+  outline: 2px solid #000;
+  color: #000;
+  font-size: 14px;
+  text-align: center;
+  padding: 12.5px 37px;
+}
+
+
+
+
+@supports (text-stroke: 1px #fff) and (background-clip: text) {
+  .card__img-label {
+    background-clip: text;
+    text-stroke: 1px #fff;
+  }
+} 
