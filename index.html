@@ -12,10 +12,10 @@
     <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
   </head>
   <body class="page">
-    <!-- <header class="header block-outline">
+    <header class="header block-outline">
       <h1 class="header__heading">&lt;/HTML&gt;</h1>
       <p class="header__title">закрывающий тег</p>
-    </header> -->
+    </header>
     <main class="content">
       <article class="card block-outline">
         <h2 class="card__title">
@@ -34,14 +34,16 @@
           Место для ваших воспоминаний о начале обучения.
         </p>
 
-          
-        <button class="buttons" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 36">
+        <button class="buttons card__icon-button" type="button">
+          <svg
+            class="like-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 39 36"
+          >
             <use href="./svg/heart.svg#heart"></use>
           </svg>
-          <span class="button__text search-form__submit-button ">Like</span>
+          <span class="button__text card__like-button block-outline">Like</span>
         </button>
-
       </article>
       <!--  -->
       <!-- <article class="card">
@@ -56,6 +58,25 @@
         </p>
         <p>Место для ваших воспоминаний о начале обучения.</p>
       </article> -->
+      <button
+        class="buttons button__text  block-outline"
+        type="button"
+        onclick="window['dialog-id'].showModal();"
+        aria-controls="dialog-id"
+      >
+        Сохранить на память
+      </button>
+      <dialog id="dialog-id">
+        
+               <h2 class="button__text ">Вставьте дискету, чтобы продолжить</h2>
+        <form>
+     
+          <form method="dialog">
+          <button class="close-button">
+                  <span class="button__text">ОК</span>
+              </button>
+        </form>
+      </dialog> 
     </main>
     <script src="./scripts/like.js"></script>
   </body>
