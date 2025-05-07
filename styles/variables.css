@@ -11,6 +11,7 @@
   --padding-card-top: clamp(0.25rem, 0.2679rem + -0.0893vw, 0.1875rem); /*4px 3px*/
   --padding-card-right: clamp(0.625rem, 0.375rem + 1.25vw, 1.5rem); /* 10px 24px*/
   --padding-card-bottom: clamp(0.375rem, 0.4286rem + -0.2679vw, 0.1875rem); /*6p 3px*/ 
+  --padding-card-block: clamp(0.375rem, 0.4286rem + -0.2679vw, 0.1875rem);
   --padding-card-left: clamp(0.75rem, 0.7857rem + -0.1786vw, 0.625rem); /*12px 10px*/  
   --shadow-color: #fff;
 }

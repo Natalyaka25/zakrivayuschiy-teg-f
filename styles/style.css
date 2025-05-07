@@ -68,8 +68,8 @@
 .card__title {
   padding-inline-start: var(--padding-card-left);
   padding-inline-end: var(--padding-card-right);
-  padding-block-start: calc(var(--padding-card-top) + 2px);
-  padding-block-end: calc(var(--padding-card-bottom)+ 2px);
+  padding-block-start: var(--padding-card-block);
+  padding-block-end: var(--padding-card-block);
   font-family: var(--font-family, sans-serif);
   font-size: 18px;
   font-variation-settings: "wght" var(--font-weight-bold);
@@ -77,7 +77,8 @@
 
 .card__img-block {
   position: relative; 
-  
+  line-height: 0;
+ 
 }
 
 .card__img {
