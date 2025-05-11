@@ -11,7 +11,7 @@
   --font-weight-normal: 400;
   --gradient-color: #d3d3d3;
   --gradient-color-start: #e7e7e7;
-  --gradient-color-end: #1a1a1a;  
+  --gradient-color-end: #1a1a1a;
   --padding-inline: 10px;
   --padding-card-top: clamp(0.25rem, 0.228rem + 0.0939vw, 5px);/*4px 5px*/ 
   /* --padding-card-bottom: clamp(5px, 0.386rem + -0.0469vw, 6px); 6px 5px  */
