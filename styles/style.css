@@ -157,7 +157,6 @@
 
 .buttons {
   display: flex;
-  justify-content: center;
   justify-content: flex-end;
   align-items: stretch;
   gap: 6px;
@@ -244,7 +243,7 @@ dialog[open]::backdrop {
 dialog .floppy-icon {
   align-self: center;
   width: 39px;
-  height: 39px; 
+  height: 39px;
 }
 
 @media (width <= 375px) {
@@ -273,7 +272,7 @@ dialog .floppy-icon {
   transform:  translateX(0); */
   cursor: pointer;
   inline-size: 130px;
-  block-size: 38px;   
+  block-size: 38px;
 }
 
 .button {
