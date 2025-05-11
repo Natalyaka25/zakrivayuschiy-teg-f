@@ -381,21 +381,6 @@ dialog .floppy-icon {
   animation-delay: 0.3s;
 }
 
-@keyframes heartbeat {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.25);
-  }
-}
-
-@keyframes heartsparks {
-  100% {
-    fill: var(--fill-accenct-color);
-  }
-}
-
 @supports (text-stroke: 1px #fff) and (background-clip: text) {
   .card__img-label {
     background-clip: text;
