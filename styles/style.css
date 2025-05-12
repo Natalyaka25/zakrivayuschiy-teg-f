@@ -140,7 +140,7 @@
   font-variation-settings: "wght" var(--font-weight-normal);
 }
 
-.card .card__paragraph:last-of-type  {
+.card .card__paragraph:last-of-type {
   padding-block-start: 27px;
 }
 
