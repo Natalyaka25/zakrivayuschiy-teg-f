@@ -76,9 +76,10 @@
 
 .card__img-block {
   position: relative;
+  margin: 0;
+  overflow: hidden;
   line-height: 0;
   background-color: transparent;
-  overflow: hidden;
 }
 
 .card__img {
@@ -146,16 +147,16 @@
 .botton-floppy {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
-  width: 339px;
-  height: 55px;
+  gap: 8px;
   margin-inline: auto;
   margin-block-end: 105px;
   padding: 0;
+  padding-inline: 19px;
   line-height: 90%;
-  gap: 7px;
-  padding-inline-start: 19px;
-  justify-content: flex-start;
+  inline-size: 339px;
+  block-size: 55px;
 }
 
 .buttons {
@@ -200,11 +201,12 @@ dialog:not([open]) {
   pointer-events: none;
 }
 
-dialog {
+.dialog {
   position: fixed;
   max-width: clamp(21.5625rem, 21.2104rem + 1.5023vw, 22.5625rem);
   height: 195px;
-  border: var(--border, none);
+  margin-block-end: clamp(14.875rem, 11.64rem + 13.8028vw, 24.0625rem);
+  border: var(--border);
   padding: 0;
   padding-inline-start: clamp(2.5rem, 2.7201rem + -0.939vw, 1.875rem);
   padding-inline-end: clamp(1.25rem, 1.4701rem + -0.939vw, 0.625rem);
@@ -213,7 +215,7 @@ dialog {
   line-height: 150%;
 }
 
-form {
+.form-dialog {
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-rows: min-content;
@@ -222,13 +224,14 @@ form {
   height: 100%;
 }
 
-dialog .title {
+.dialog .title {
+  font-weight: normal;
   line-height: 150%;
   text-align: start;
   text-transform: uppercase;
 }
 
-dialog .button {
+.dialog .button {
   grid-column: 1/ span2;
   justify-self: start;
   align-self: center;
@@ -238,12 +241,12 @@ dialog .button {
 }
 
   /* Затемнение фона */
-dialog[open]::backdrop {
+.dialog[open]::backdrop {
   background: rgba(0, 0, 0, 0.75);
    /* backdrop-filter: blur(4px); */
 }
 
-dialog .floppy-icon {
+.dialog .floppy-icon {
   align-self: center;
   width: 39px;
   height: 39px;
@@ -300,19 +303,22 @@ dialog .floppy-icon {
 }
 
 .card__like-button:hover::before,
-.botton-floppy:hover::before {
+.botton-floppy:hover::before,
+.form-dialog .button:hover::before {
   transform: translateX(0);
   /* transform: scaleX(1); */
 }
 
 .card__like-button:focus,
 .card__icon-button:focus,
-.botton-floppy:focus {
+.botton-floppy:focus,
+.form-dialog .button:focus {
   outline: none;
 }
 
 .card__like-button:focus-visible,
-.botton-floppy:focus-visible {
+.botton-floppy:focus-visible,
+.form-dialog .button:focus-visible {
   box-shadow: 2px 2px 0 0px  rgb(0 0 0 / 1);
   transition: box-shadow 0.3s ease-in-out;
   transform-origin: 0 0;
