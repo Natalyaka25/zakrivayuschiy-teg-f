@@ -78,6 +78,7 @@
   position: relative;
   line-height: 0;
   background-color: transparent;
+  overflow: hidden;
 }
 
 .card__img {
