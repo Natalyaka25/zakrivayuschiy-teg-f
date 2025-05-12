@@ -10,6 +10,45 @@
 
 */
 
+.main-body {
+  fill: var(--fill-color);
+  transition: fill 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.core {
+  fill: var(--fill-color);
+  transition: fill 0.3s 0.03s ease-in-out;
+  cursor: pointer;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--fill-accenct-color);
+  transition: fill 0.3s 0.06s ease-in-out;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--fill-accenct-color);
+  transition: fill 0.3s 0.06s ease-in-out;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--fill-accenct-color);
+  transition: fill 0.3s 0.06s ease-in-out;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: heartbeat 0.3s  ease-in;
+  animation-delay: 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  transform-origin: center;
+  animation: heartsparks 0.3s ease-in;
+  animation-delay: 0.3s;
+}
+
 @keyframes heartbeat {
   0% {
     transform: scale(1);

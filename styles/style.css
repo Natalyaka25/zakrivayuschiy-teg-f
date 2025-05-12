@@ -138,7 +138,7 @@
   font-variation-settings: "wght" var(--font-weight-normal);
 }
 
-.card .card__paragraph:nth-last-child(2) {
+.card .card__paragraph:last-of-type  {
   padding-block-start: 27px;
 }
 
@@ -319,73 +319,34 @@ dialog .floppy-icon {
 
 .card__icon-button:focus-visible {
   outline: var(--border);
-  transition: outline 0.3s ease-in-out;
-}
-
-.main-body {
-  fill: var(--fill-color);
-  transition: fill 0.3s;
-  cursor: pointer;
-}
-
-.core {
-  fill: var(--fill-color);
-  transition: fill 0.3s 0.03s;
-  cursor: pointer;
+  transition: outline 0.3s ease;
 }
 
 .heart:hover .main-body {
   fill: var(--fill-contour-color);
-  transition: fill 0.3s 0.05s;
+  transition: fill 0.3s 0.05s ease-in-out;
   cursor: pointer;
 }
 
 .heart:hover .core {
   fill: var(--fill-contour-color);
-  transition: fill 0.3s;
+  transition: fill 0.3s ease-in-out;
   cursor: pointer;
 }
 
 .heart:active .main-body {
   fill: var(--fill-accenct-color);
-  transition: fill 0.3s 0.05s;
+  transition: fill 0.3s 0.05s ease-in-out;
   cursor: pointer;
 }
 
 .heart:active .core {
   fill: var(--fill-accenct-color);
-  transition: fill 0.3s;
+  transition: fill 0.3s ease-in-out;
   cursor: pointer;
 }
 
-.like-icon.is-liked .contour {
-  fill: var(--fill-accenct-color);
-  transition: fill 0.3s 0.06s;
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--fill-accenct-color);
-  transition: fill 0.3s 0.06s;
-}
-
-.like-icon.is-liked .core {
-  fill: var(--fill-accenct-color);
-  transition: fill 0.3s 0.06s;
-}
-
-.like-icon.is-liked .heart {
-  transform-origin: center;
-  animation: heartbeat 0.3s  ease-in;
-  animation-delay: 0.1s;
-}
-
-.like-icon.is-liked .sparks {
-  transform-origin: center;
-  animation: heartsparks 0.3s ease-in;
-  animation-delay: 0.3s;
-}
-
-@supports (text-stroke: 1px #fff) and (background-clip: text) {
+@supports (-webkit-text-stroke: 1px #fff) and (background-clip: text) {
   .card__img-label {
     background-clip: text;
     text-stroke: 1px #fff;
