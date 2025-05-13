@@ -196,32 +196,27 @@
 
 /********************************************** Диалоговое окно*********************** */
 
-/* dialog:not([open]) {
+dialog:not([open]) {
   opacity: 0;
   pointer-events: none;
-} */
+}
 
 .dialog {
-  /* position: fixed; */
+  position: fixed;
   max-width: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
   height: 191px;
   border: var(--border);
   padding: 0;
-  /* padding-inline-start: clamp(2.5rem, 2.7201rem + -0.939vw, 1.875rem);
-  padding-inline-end: clamp(1.25rem, 1.4701rem + -0.939vw, 0.625rem); */
-  /* padding-block-start: 30px; */
   font-family: var(--font-family-accent, 'Arial'), sans-serif;
   line-height: 150%;
   background-color: #fff;
-  padding-inline: 40px; /*30px;*/
+  padding-inline: clamp(1.875rem, 2.7201rem + -0.939vw, 2.5rem); /*40px 30px;*/
   padding-block: 30px;
-    margin-block-end: clamp(14.875rem, 11.64rem + 13.8028vw, 24.0625rem);
-}
+ }
 
 .form-dialog {
   display: grid;
-  grid-template-columns: min-content 198px;
-  /* grid-template-rows: min-content; */
+  grid-template-columns: min-content 1fr;
   column-gap: 20px;
   row-gap: 30px;
   width: 100%;
@@ -229,7 +224,9 @@
   align-content: space-between;
 }
 
-.dialog .title {
+.dialog__title  {
+  grid-column: 2/ span2;
+  font-size: 14px;
   font-weight: normal;
   line-height: 150%;
   text-align: start;
@@ -246,11 +243,9 @@
   inline-size: clamp(16.0625rem, 15.2702rem + 3.3803vw, 18.3125rem);
 }
 
-
-/* .dialog[open]::backdrop {
-  background: rgba(0, 0, 0, 0.75);
-  
-} */
+.dialog[open]::backdrop {
+  background: rgba(0, 0, 0, 0.75);  
+}
 
 .dialog .floppy-icon {
   align-self: center;
