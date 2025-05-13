@@ -220,7 +220,7 @@ dialog:not([open]) {
   align-content: space-between;
 }
 
-.dialog__title  {
+.dialog__title {
   grid-column: 2/ span2;
   font-size: 14px;
   font-weight: normal;
@@ -240,7 +240,7 @@ dialog:not([open]) {
 }
 
 .dialog[open]::backdrop {
-  background: rgba(0, 0, 0, 0.75);  
+  background: rgba(0, 0, 0, 0.75);
 }
 
 .dialog .floppy-icon {
@@ -284,7 +284,7 @@ dialog:not([open]) {
   cursor: pointer;
 }
 
- .button::before {
+.button::before {
   content: "";
   position: absolute;
   inset: 0;
