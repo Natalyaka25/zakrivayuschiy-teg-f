@@ -24,7 +24,7 @@
 
 .like-icon.is-liked .contour {
   fill: var(--fill-accenct-color);
-  transition: fill 0.3s 0.06s ease-in-out;
+  transition: fill 0.3s 0.06s ease-in;
 }
 
 .like-icon.is-liked .main-body {
@@ -34,7 +34,7 @@
 
 .like-icon.is-liked .core {
   fill: var(--fill-accenct-color);
-  transition: fill 0.3s 0.06s ease-in-out;
+  transition: fill 0.3s 0.06s ease-in;
 }
 
 .like-icon.is-liked .heart {
