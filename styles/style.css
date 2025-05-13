@@ -343,7 +343,7 @@ dialog:not([open]) {
 
 @supports((text-stroke: 2px var(--shadow-color)) or (-webkit-text-stroke: 2px var(--shadow-color))) {
   .card__img-label {
-    -webkit-text-stroke:  2px var(--shadow-color); 
+    -webkit-text-stroke:  2px var(--shadow-color);
     text-stroke: 2px var(--shadow-color);
     text-shadow: none;
     paint-order: stroke fill;
