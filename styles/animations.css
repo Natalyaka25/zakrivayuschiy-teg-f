@@ -12,7 +12,7 @@
 
 .main-body {
   fill: var(--fill-color);
-  transition: fill 0.3s ease-in-out;
+  transition: fill 0.1s linear;
   cursor: pointer;
 }
 
@@ -29,7 +29,7 @@
 
 .like-icon.is-liked .main-body {
   fill: var(--fill-accenct-color);
-  transition: fill 0.3s 0.06s ease-in-out;
+  transition: fill 0.3s 0.06s ease-in;
 }
 
 .like-icon.is-liked .core {
